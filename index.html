@@ -2,40 +2,65 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Scratch Video - Школа Звёздочка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои работы - Школа Звёздочка</title>
     <style>
         body {
-            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #000; /* Черный фон, как в кино */
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #ffce00, #ff7300);
             color: white;
-            font-family: sans-serif;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            width: 80%;
         }
-        iframe {
-            border: none;
+        h1 { margin: 0; font-size: 2.5em; }
+        h2 { margin: 5px 0 0; font-weight: normal; opacity: 0.9; }
+        
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        /* Стиль для вставки Scratch */
+        .scratch-container {
+            border: 5px solid #4d97ff;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(76, 151, 255, 0.5);
+            overflow: hidden;
+            margin-top: 15px;
         }
-        h2 { margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
-    <h2>Школа Звёздочка: Роботы 6 класс</h2>
+    <div class="header">
+        <h1>Мои работы</h1>
+        <h2>Школа «Звёздочка» — 6 класс</h2>
+    </div>
 
-    <iframe 
-        src="https://scratch.mit.edu/projects/ТВОЙ_ID_ПРОЕКТА/embed" 
-        allowtransparency="true" 
-        width="485" 
-        height="402" 
-        frameborder="0" 
-        scrolling="no" 
-        allowfullscreen>
-    </iframe>
+    <div class="project-card">
+        <h3>Мой проект на Scratch</h3>
+        <div class="scratch-container">
+            <iframe src="https://turbowarp.org/embed.html?project_url=https://[ТВОЙ-НИК].github.io/[ИМЯ-РЕПОЗИТОРИЯ]/Scratch-3.sb3" 
+                    width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        <p>Нажми на флажок, чтобы запустить игру!</p>
+    </div>
 
 </body>
 </html>
