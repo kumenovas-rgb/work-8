@@ -22,28 +22,44 @@
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 30px;
-            width: 80%;
+            width: 90%;
+            max-width: 800px;
         }
-        h1 { margin: 0; font-size: 2.5em; }
+        h1 { margin: 0; font-size: 2em; }
         h2 { margin: 5px 0 0; font-weight: normal; opacity: 0.9; }
         
-        .project-card {
+        /* Сетка для размещения видео и игры рядом */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .card {
             background: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
-            max-width: 600px;
-            width: 100%;
         }
-        
-        /* Стиль для вставки Scratch */
-        .scratch-container {
-            border: 5px solid #4d97ff;
-            border-radius: 10px;
+
+        .media-container {
+            border: 4px solid #4d97ff;
+            border-radius: 12px;
             overflow: hidden;
-            margin-top: 15px;
+            background: #000;
+            line-height: 0; /* Убирает лишние отступы */
         }
+
+        video, iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3; /* Сохраняем пропорции как в Scratch */
+        }
+
+        p { font-weight: bold; color: #555; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -53,13 +69,26 @@
         <h2>Школа «Звёздочка» — 6 класс</h2>
     </div>
 
-    <div class="project-card">
-        <h3>Мой проект на Scratch</h3>
-        <div class="scratch-container">
-            <iframe src="https://turbowarp.org/embed.html?project_url=https://[ТВОЙ-НИК].github.io/[ИМЯ-РЕПОЗИТОРИЯ]/Scratch-3.sb3" 
-                    width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <div class="content-grid">
+        <div class="card">
+            <h3>Демонстрация работы</h3>
+            <div class="media-container">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+            <p>Как работает ИИ в моем проекте</p>
         </div>
-        <p>Нажми на флажок, чтобы запустить игру!</p>
+
+        <div class="card">
+            <h3>Сам проект Scratch</h3>
+            <div class="media-container">
+                <iframe src="https://turbowarp.org/embed.html?project_url=https://[ТВОЙ-НИК].github.io/[ИМЯ-РЕПО]/Scratch-3.sb3" 
+                        allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </div>
+            <p>Нажми флажок и играй!</p>
+        </div>
     </div>
 
 </body>
