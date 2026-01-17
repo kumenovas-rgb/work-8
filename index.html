@@ -2,115 +2,40 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои работы на Scratch - Школа Звёздочка</title>
+    <title>Scratch Video - Школа Звёздочка</title>
     <style>
-        /* Основное оформление */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e0f2fe;
             margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-
-        header {
-            background-color: #4c97ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000; /* Черный фон, как в кино */
             color: white;
-            padding: 30px;
-            text-align: center;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            font-family: sans-serif;
         }
-
-        h1 { margin: 0; font-size: 2.5em; }
-        .sub-header { font-size: 1.2em; opacity: 0.9; }
-
-        /* Сетка для проектов */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        /* Карточка проекта */
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 2px solid #ffab19; /* Оранжевый цвет Scratch */
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .project-card img {
-            width: 100%;
+        iframe {
+            border: none;
             border-radius: 10px;
-            background-color: #eee;
+            box-shadow: 0 0 20px rgba(76, 151, 255, 0.5);
         }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #4c97ff;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-
-        .btn:hover { background-color: #3373cc; }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-            font-size: 0.9em;
-        }
+        h2 { margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Школа «Звёздочка»</h1>
-        <p class="sub-header">Работы на Scratch ученика 6-го класса</p>
-    </header>
+    <h2>Школа Звёздочка: Роботы 6 класс</h2>
 
-    <div class="projects-grid">
-        
-        <div class="project-card">
-            <h3>Мой первый робот</h3>
-            <p>Описание: Здесь я научил робота ходить и говорить.</p>
-            <a href="#" class="btn">Посмотреть проект</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Звёздная гонка</h3>
-            <p>Описание: Игра, где нужно облетать астероиды.</p>
-            <a href="#" class="btn">Посмотреть проект</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Лабиринт 6-го класса</h3>
-            <p>Описание: Сложный лабиринт с ловушками.</p>
-            <a href="#" class="btn">Посмотреть проект</a>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>© 2026 Проект «Scratch-2» — Создано в школе «Звёздочка»</p>
-    </footer>
+    <iframe 
+        src="https://scratch.mit.edu/projects/ТВОЙ_ID_ПРОЕКТА/embed" 
+        allowtransparency="true" 
+        width="485" 
+        height="402" 
+        frameborder="0" 
+        scrolling="no" 
+        allowfullscreen>
+    </iframe>
 
 </body>
 </html>
